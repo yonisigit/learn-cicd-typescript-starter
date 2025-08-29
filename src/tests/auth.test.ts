@@ -30,5 +30,3 @@ test("getAPIKey returns null when the Authorization header has fewer than 2 part
 //   const apiKey = getAPIKey(headers);
 //   expect(apiKey).toBe("test-api-key");
 // });
-
-
