@@ -4,7 +4,6 @@ on:
   push:
     branches: [main]
 
-
 jobs:
   Deploy:
     name: Deploy
@@ -23,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Run app
-        run: npm run build      
+        run: npm run build
 
       - id: auth
         uses: google-github-actions/auth@v2
@@ -37,5 +36,4 @@ jobs:
         run: gcloud info
 
       - name: Build and push Docker image
-        run: gcloud builds submit --tag REGION-docker.pkg.dev/PROJECT_ID/REPOSITORY/IMAGE:TAG .
-
+        run: gcloud builds submit --tag us-central1-docker.pkg.dev/handy-digit-470810-i0/notely-ar-repo
